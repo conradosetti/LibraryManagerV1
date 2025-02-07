@@ -14,18 +14,9 @@ while (true)
 
     switch (input)
     {
-        case "1": Console.WriteLine("Enter book ID: ");
-            var id = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter book title: ");
-            var title = Console.ReadLine();
-            Console.WriteLine("Enter author: ");
-            var author = Console.ReadLine();
-            Console.WriteLine("Enter book ISBN: ");
-            var isbn = Console.ReadLine();
-            Console.WriteLine("Enter book publish date: ");
-            var publishDate = Convert.ToInt32(Console.ReadLine());
+        case "1": 
             
-            gerenciador.AddBook(id, title, author, isbn, publishDate);
+            gerenciador.AddBook();
             break;
         case "2":
             Console.WriteLine("Book List: ");
