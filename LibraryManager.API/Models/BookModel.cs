@@ -3,12 +3,13 @@
 public class BookModel
 {
     public int Id { get; private set; }
-    public string Title { get; private set; }
-    public string Author { get; private set; }
-    public string ISBN { get; private set; }
+    public string? Title { get; private set; }
+    public string? Author { get; private set; }
+    public string? ISBN { get; private set; }
     public int Year { get; private set; }
+    public bool Islent { get; set; } = false;
 
-    public BookModel(int id, string title, string author, string isbn, int year)
+    public BookModel(int id, string? title, string? author, string? isbn, int year)
     {
         Id = id;
         Title = title;
@@ -19,6 +20,7 @@ public class BookModel
     
     public override string ToString()
     {
-        return $"[{Id}] {Title} - {Author} ({Year}) - ISBN: {ISBN}";
+        var text = Islent ? "Book lent." : "Book unlent.";
+        return $"[{Id}] {Title} - {Author} ({Year}) - ISBN: {ISBN} - ";
     }
 }
