@@ -3,8 +3,8 @@
 public class BookModel
 {
     public int Id { get; private set; }
-    public string? Title { get; private set; }
-    public string? Author { get; private set; }
+    public string Title { get; private set; }
+    public string Author { get; private set; }
     public string? ISBN { get; private set; }
     public int Year { get; private set; }
     public bool Islent { get; set; } = false;
